@@ -1,4 +1,35 @@
+.container {
+    width: 700px;
+    height: 500px;
+    margin: 40px auto;
+    border: 2px solid black;
+    position: relative;
 
+}
+
+.container [class|="circle"] {
+    width: 70px;
+    height: 70px;
+}
+
+.circle-1 {
+    background-color: green;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 2s;
+}
+
+.container:hover .circle-1 {
+    transform: scale(2) translate(-25%, -25%);
+
+}
+
+
+/* diger usulla avtomatik(heartbeat)  */
+/* 
 .container{
     width: 700px;
     height: 500px;
@@ -19,12 +50,20 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
-    transition: 2s;
+    animation-name: auto;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
-.container:hover .circle-1{
-    transform: scale(2) translate(-25%,-25%);
- 
-}
 
+@keyframes auto{
+    from{
+        transform: translate(-50%,-50%) scale(1);
+    }
+    to{
+        transform: translate(-25%,-25%) scale(2);
+    }
+
+  
+} */
